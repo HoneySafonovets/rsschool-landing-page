@@ -1,0 +1,192 @@
+.enjoy__content-wrapper {
+  background: url('/hero.jpg') no-repeat;
+  border-radius: 40px;
+  background-position: center center;
+  background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-size: cover;
+  // background: url('../assets/main/enjoy.png'), lightgray 50% / contain no-repeat;
+
+  // width: calc(100%);
+  // max-width: 1440px;
+  position: relative;
+
+  // Enjoy video background
+  .enjoy__background-video {
+    z-index: -2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    // margin: 100px;
+  }
+}
+
+.enjoy__content {
+  // position: relative;
+  // max-width: 530px;
+  padding: 100px 100px 100px 100px;
+
+}
+
+// For true padding and margin
+.enjoy__content-item {
+  max-width: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  border-radius: 40px;
+}
+
+.enjoy__title {
+  font-family: $font-main;
+  color: $color-light;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%; /* 75.6px */
+}
+
+.enjoy__subtitle {
+  font-family: $font-main;
+  color: $color-light;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+// Button styles
+.enjoy__button {
+  // position: relative;
+  color: $color-dark;
+  background-color: $background-main;
+  border-radius: 100px;
+  padding: 20px 78px;
+  max-width: 200px; 
+  font-family: $font-main;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+  position: relative;
+
+  &::after {
+    display: none;
+    position: absolute;
+    content: '';
+    background-image: url('../assets/main/cup.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    top: 22px;
+    right: 64px;
+    opacity: 1;
+    animation: not-block 0.3s 1;
+  }
+
+  &:hover::after {
+    display: block;
+    animation: cup__block 0.3s 1;
+  }
+
+  &:hover .enjoy__button-item {
+    transition: transform 0.3s ease-in;
+    transform: translate(-14px, 0px);
+  }
+
+  &:not(:hover) .enjoy__button-item {
+    transition: transform 0.3s ease-in;
+    transform: translate(0px, 0px);
+  }
+
+  &:not(:hover):after {
+    // display: none;
+    animation: not-block 0.3s ease-in forwards;
+  }
+}
+
+// Animatio for cup
+@keyframes cup__block {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes not-block {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+// Media styles
+@media (max-width: 768px) {
+  .enjoy__content {
+    // background-repeat: no-repeat;
+    // background-position: 100% 100%;
+    // background-size: cover;
+    // background: url('../assets/main/enjoy.png'), lightgray 50% / contain no-repeat;
+    // background-origin: padding-box;
+    padding: 100px 60px;
+    border-radius: 40px;
+    // align-items: center;
+    gap: 40px;
+  }
+
+  @media (hover: none) {
+    .enjoy__button {
+      color: $color-dark;
+      background-color: $background-main;
+      border-radius: 100px;
+      padding: 20px 78px;
+      max-width: 200px; 
+      font-family: $font-main;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 24px */
+      position: relative;
+    
+      .enjoy__button-item {
+        transform: translate(-14px, 0px) !important;
+      }
+      &:not(:hover) .enjoy__button-item {
+        animation: none;
+        transition: none;
+      }
+
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        background-image: url('../assets/main/cup.svg');
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        top: 22px;
+        right: 64px;
+        // opacity: 1;
+        // animation: not-block 0.3s 1;
+      }
+      &:not(:hover):after {
+        animation: none;
+      }
+    }
+  }
+}

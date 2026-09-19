@@ -1,0 +1,135 @@
+.about {
+  // padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.about__title {
+  text-align: start;
+  align-self: stretch;
+  margin: 0 auto;
+  line-height: 75px;
+}
+
+.about__gallery {
+  display: flex;
+  // overflow: hidden;
+  gap: 40px;
+}
+
+// gallery-item container 
+.about__item-container {
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+// Styles for SIZE img
+
+.about__child-left {
+  &:first-child {
+    width: 660px;
+    height: 590px;
+  }
+  &:last-child {
+    width: 660px;
+    height: 430px;
+  }
+}
+
+.about__child-right {
+  &:first-child {
+    width: 660px;
+    height: 430px;
+  }
+  &:last-child {
+    width: 660px;
+    height: 590px;
+  }
+}
+
+// Item styles
+.about__gallery-item {
+  display: block;
+}
+
+// Styles for scale img
+.about__gallery-item:hover {
+  transform: scale(1);
+  transition: transform 0.3s ease-in;
+}
+
+.about__gallery-item:not(:hover) {
+  transform: scale(110%);
+  transition: transform 0.3s ease-in;
+}
+
+// 
+.about__gallery-left {
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+}
+
+.about__gallery-right {
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+}
+
+
+// Media styles
+@media (max-width: 768px) {
+  .about__gallery {
+    display: flex;
+    // overflow: hidden;
+    // gap: 40px;
+    justify-content: center;
+    flex-direction: column;
+    // width: 100%;
+  }
+
+  // Center images
+  .about__gallery-left {
+    justify-content: center;
+    align-items: center;
+    // width: 100%;
+  }
+  .about__gallery-right {
+    justify-content: center;
+    align-items: center;
+    // width: 100%;
+  }
+  // 100% width for Images
+  .about__child-left {
+    &:first-child {
+      width: 100%;
+      height: 587px;
+    }
+    &:last-child {
+      display: none;
+    }
+  }
+  
+  .about__child-right {
+    &:first-child {
+      display: none;
+    }
+    &:last-child {
+      width: 100%;
+      height: 591px;
+    }
+  }
+  // Not hover
+  @media (hover: none) {
+    .about__gallery-item:hover {
+      transform: none;
+      transition: none;
+    }
+    
+    .about__gallery-item:not(:hover) {
+      transform: scale(1.06);
+    }
+  }
+  // Size img in gallery
+}

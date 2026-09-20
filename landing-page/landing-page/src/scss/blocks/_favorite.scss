@@ -62,14 +62,18 @@
 
 .favorite__content {
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 1152px;
-  padding: 0px 336px 0px 336px;
+  // padding: 0px 336px 0px 336px;
 }
 
 .favorite__slider {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  justify-content: center;
+  align-items: center;
 
   .favorite__drink {
     display: block;
@@ -83,6 +87,7 @@
 .favorite__drink-description {
   display: flex;
   flex-direction: column;
+  max-width: 480px;
   gap: 16px;
 
   .favorite__drink-title {

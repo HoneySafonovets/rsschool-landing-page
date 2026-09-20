@@ -60,3 +60,26 @@ html {
     overflow-x: hidden;
   }
 }
+
+@media screen and (max-width: 715px) {
+  .title {
+    font-family: $font-main;
+    color: $color-dark;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom: 40px;
+    font-style: normal;
+  }
+}
+
+@media screen and (max-width: 715px) {
+  .container {
+    // max-width: 380px;
+    // width: 1440px;
+    margin: 0 auto;
+    padding: 20px 16px 100px 16px;
+    overflow-x: hidden;
+  }
+}

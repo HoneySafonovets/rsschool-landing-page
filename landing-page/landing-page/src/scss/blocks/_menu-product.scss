@@ -369,3 +369,19 @@
   }
 }
 
+@media screen and (max-width: 715px) {
+  .menu__wrapper {
+    display: flex;
+    // grid-template-columns: 310px 310px;
+    // grid-template-rows: 506px 506px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .menu__item {
+    max-width: 310px;
+  }
+}
+

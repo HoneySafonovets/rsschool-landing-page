@@ -46,29 +46,29 @@
   gap: 6px;
   cursor: pointer;
 
-  // Hover styles
-  &:hover {
-    background-color: $color-pagination-active;
-    color: $color-light;
-    transition: all 0.3s ease-in;
-    border: 1px solid opacity(0);
-    // border: none;
-  }
-  &:not(:hover) {
-    background-color: $color-light;
-    color: $color-dark;
-    transition: all 0.3s ease-in;
-  }
+  // // Hover styles
+  // &:hover {
+  //   background-color: $color-pagination-active;
+  //   color: $color-light;
+  //   transition: all 0.3s ease-in;
+  //   border: 1px solid opacity(0);
+  //   // border: none;
+  // }
+  // &:not(:hover) {
+  //   background-color: $color-light;
+  //   color: $color-dark;
+  //   transition: all 0.3s ease-in;
+  // }
   
-  // SVG hover
-  &:hover svg path {
-    transition: fill 0.3s ease-in;
-    fill: $color-light;
-  }
-  &:not(:hover) svg path {
-    transition: fill 0.3s ease-in;
-    fill: $color-dark;
-  }
+  // // SVG hover
+  // &:hover svg path {
+  //   transition: fill 0.3s ease-in;
+  //   fill: $color-light;
+  // }
+  // &:not(:hover) svg path {
+  //   transition: fill 0.3s ease-in;
+  //   fill: $color-dark;
+  // }
 }
 
 // Button
@@ -164,5 +164,35 @@
     margin: 40px 29px 0px 29px;
     width: 630px;
     height: auto;
+  }
+}
+
+@media screen and (hover: hover) {
+  .download__apple,
+  .download__google {
+
+    // Hover styles
+    &:hover {
+      background-color: $color-pagination-active;
+      color: $color-light;
+      transition: all 0.3s ease-in;
+      border: 1px solid opacity(0);
+      // border: none;
+    }
+    &:not(:hover) {
+      background-color: $color-light;
+      color: $color-dark;
+      transition: all 0.3s ease-in;
+    }
+    
+    // SVG hover
+    &:hover svg path {
+      transition: fill 0.3s ease-in;
+      fill: $color-light;
+    }
+    &:not(:hover) svg path {
+      transition: fill 0.3s ease-in;
+      fill: $color-dark;
+    }
   }
 }

@@ -49,25 +49,25 @@
     align-items: center;
   }
 
-  // hover styles
-  &:hover {
-    background-color: $color-light;
-    transition: background-color 0.3s ease-in;
-    border: 1px solid opacity(0);
-  }
-  &:not(:hover) {
-    background-color: $color-pagination-active;
-    transition: background-color 0.3s ease-in;
-  }
-  // Styles for SVG hover
-  &:hover .footer__social-link svg path {
-    stroke: $color-dark;
-    transition: stroke 0.3s ease-in;
-  }
-  &:not(:hover) .footer__social-link svg path {
-    stroke: $color-light;
-    transition: stroke 0.3s ease-in;
-  }
+  // // hover styles
+  // &:hover {
+  //   background-color: $color-light;
+  //   transition: background-color 0.3s ease-in;
+  //   border: 1px solid opacity(0);
+  // }
+  // &:not(:hover) {
+  //   background-color: $color-pagination-active;
+  //   transition: background-color 0.3s ease-in;
+  // }
+  // // Styles for SVG hover
+  // &:hover .footer__social-link svg path {
+  //   stroke: $color-dark;
+  //   transition: stroke 0.3s ease-in;
+  // }
+  // &:not(:hover) .footer__social-link svg path {
+  //   stroke: $color-light;
+  //   transition: stroke 0.3s ease-in;
+  // }
 }
 
 // Rigth block 
@@ -116,25 +116,6 @@
   position: relative;
   // text-align: center;
   // margin-bottom: 4px;
-
-  &::after {
-    content: '';
-    width: 0;
-    height: 2px;
-    left: 5px;
-    bottom: -5px;
-    background-color: $color-light;
-    position: absolute;
-    opacity: 1;
-  }
-
-  &:hover::after {
-    display: block;
-    animation: slides-footer 0.4s ease-in 1 forwards;
-  }
-  &:not(:hover):after {
-    animation: slides-footer-reverse 0.4s ease-in forwards;
-  }
 
   &:link {
     color: $color-light;
@@ -252,5 +233,50 @@
   .font-footer {
     font-size: 32px;
     line-height: 125%;
+  }
+}
+
+@media screen and (hover: hover) {
+  .footer__contact-link {
+    &::after {
+      content: '';
+      width: 0;
+      height: 2px;
+      left: 5px;
+      bottom: -5px;
+      background-color: $color-light;
+      position: absolute;
+      opacity: 1;
+    }
+
+    &:hover::after {
+      display: block;
+      animation: slides-footer 0.4s ease-in 1 forwards;
+    }
+    &:not(:hover):after {
+      animation: slides-footer-reverse 0.4s ease-in forwards;
+    }
+  }
+
+  .footer__social-item {
+    // hover styles
+    &:hover {
+      background-color: $color-light;
+      transition: background-color 0.3s ease-in;
+      border: 1px solid opacity(0);
+    }
+    &:not(:hover) {
+      background-color: $color-pagination-active;
+      transition: background-color 0.3s ease-in;
+    }
+    // Styles for SVG hover
+    &:hover .footer__social-link svg path {
+      stroke: $color-dark;
+      transition: stroke 0.3s ease-in;
+    }
+    &:not(:hover) .footer__social-link svg path {
+      stroke: $color-light;
+      transition: stroke 0.3s ease-in;
+    }
   }
 }

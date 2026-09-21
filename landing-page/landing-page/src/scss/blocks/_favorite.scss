@@ -28,36 +28,36 @@
   margin-top: auto;
   margin-bottom: auto;
 
-  &:hover {
-    cursor: pointer;
-    background-color: $color-pagination-active;
-    transition: background-color 0.3s ease-in;
-    border: 1px solid opacity(0);
-  }
+  // &:hover {
+  //   cursor: pointer;
+  //   background-color: $color-pagination-active;
+  //   transition: background-color 0.3s ease-in;
+  //   border: 1px solid opacity(0);
+  // }
 
   & svg path {
     fill: $color-dark;
     stroke: $color-dark;
   }
-  // When hover on
-  &:hover svg path {
-    // fill: $color-light;
-    transition: stroke 0.3s ease-in;
-    stroke: $color-light;
-  }
+  // // When hover on
+  // &:hover svg path {
+  //   // fill: $color-light;
+  //   transition: stroke 0.3s ease-in;
+  //   stroke: $color-light;
+  // }
 
-  // not styles for arrow
-  &:not(:hover) svg path {
-    // fill: $color-light;
-    transition: stroke 0.3s ease-in;
-    stroke: $color-dark;
-  }
+  // // not styles for arrow
+  // &:not(:hover) svg path {
+  //   // fill: $color-light;
+  //   transition: stroke 0.3s ease-in;
+  //   stroke: $color-dark;
+  // }
 
-  &:not(:hover) {
-    cursor: pointer;
-    background-color: $color-light;
-    transition: background-color 0.3s ease-in;
-  }
+  // &:not(:hover) {
+  //   cursor: pointer;
+  //   background-color: $color-light;
+  //   transition: background-color 0.3s ease-in;
+  // }
 }
 
 .favorite__content {
@@ -188,38 +188,6 @@
     margin-top: auto;
     margin-bottom: auto;
 
-    @media (hover: hover) {
-      &:hover {
-        cursor: pointer;
-        background-color: $color-pagination-active;
-        transition: background-color 0.3s ease-in;
-        border: 1px solid opacity(0);
-      }
-    
-      & svg path {
-        fill: $color-dark;
-        stroke: $color-dark;
-      }
-      // When hover on
-      &:hover svg path {
-        // fill: $color-light;
-        transition: stroke 0.3s ease-in;
-        stroke: $color-light;
-      }
-    
-      // not styles for arrow
-      &:not(:hover) svg path {
-        // fill: $color-light;
-        transition: stroke 0.3s ease-in;
-        stroke: $color-dark;
-      }
-    
-      &:not(:hover) {
-        cursor: pointer;
-        background-color: $color-light;
-        transition: background-color 0.3s ease-in;
-      }
-    }
   }
 }
 
@@ -303,6 +271,36 @@
       font-style: normal;
       font-weight: 600;
       line-height: 125%; /* 30px */
+    }
+  }
+}
+
+@media screen and (hover: hover) {
+  .favorite__arrow {
+    &:hover {
+      cursor: pointer;
+      background-color: $color-pagination-active;
+      transition: background-color 0.3s ease-in;
+      border: 1px solid opacity(0);
+    }
+    // When hover on
+    &:hover svg path {
+      // fill: $color-light;
+      transition: stroke 0.3s ease-in;
+      stroke: $color-light;
+    }
+
+    // not styles for arrow
+    &:not(:hover) svg path {
+      // fill: $color-light;
+      transition: stroke 0.3s ease-in;
+      stroke: $color-dark;
+    }
+
+    &:not(:hover) {
+      cursor: pointer;
+      background-color: $color-light;
+      transition: background-color 0.3s ease-in;
     }
   }
 }

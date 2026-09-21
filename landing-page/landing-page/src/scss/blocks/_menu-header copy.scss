@@ -7,7 +7,7 @@
   line-height: 125%;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .title-menu {
     font-family: $font-main;
     font-size: 60px;
@@ -15,5 +15,11 @@
     font-weight: 600;
     line-height: 125%; /* 75px */
     margin: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title-menu {
+    font-size: 32px;
   }
 }

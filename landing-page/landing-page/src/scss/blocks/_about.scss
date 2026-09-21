@@ -107,39 +107,34 @@
 }
 
 // Media styles
-@media (max-width: 768px) {
-    // 100% width for Images
-  // .about__child-left {
-  //   &:first-child {
-  //     width: 100%;
-  //     height: 587px;
-  //   }
-  //   &:last-child {
-  //     display: none;
-  //   }
-  // }
-  
-  // .about__child-right {
-  //   &:first-child {
-  //     display: none;
-  //   }
-  //   &:last-child {
-  //     width: 100%;
-  //     height: 591px;
-  //   }
-  // }
-  // Not hover
-  // @media (hover: none) {
-  //   .about__gallery-item:hover {
-  //     transform: none;
-  //     transition: none;
-  //   }
-    
-  //   .about__gallery-item:not(:hover) {
-  //     transform: scale(1.06);
-  //   }
-  // }
-  // Size img in gallery
+@media (max-width: 715px) {
+  .about__child-left:first-child, .about__child-right:last-child {
+    // max-width: 100%;
+    display: flex;
+    overflow: hidden;
+    height: 590px;
+  }
+
+  .about__gallery-left, .about__gallery-right {
+    max-width: 380px;
+  }
+
+  .about__item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-width: 380px;
+    height: 590px;
+  }
+
+  .about__title {
+    text-align: start;
+    align-self: stretch;
+    font-size: 32px;
+    margin: 0 auto;
+    line-height: 125%;
+  }
 }
 
 @media screen and (hover: hover) {

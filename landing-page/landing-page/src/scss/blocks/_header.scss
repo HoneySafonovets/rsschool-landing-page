@@ -517,3 +517,15 @@
   }
 }
 
+@media screen and (max-width: 885px) {
+  .header .header__controller-container {
+    gap: 6px;
+    padding-left: 0px;
+  }
+
+  .header .header__switch-theme-container {
+    max-width: 104px;
+    height: 52px;
+  }
+}
+

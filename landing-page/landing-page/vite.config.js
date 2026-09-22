@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/rsschool-landing-page/landing-page/landing-page/',
+  base: './',
   build: {
     rollupOptions: {
       input: {

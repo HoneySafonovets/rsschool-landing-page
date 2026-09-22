@@ -57,7 +57,7 @@
 // Item styles
 .about__gallery-item {
   display: block;
-  transform: scale(100%);
+  transform: scale(110%);
   transition: transform 0.3s ease-in;
   border-radius: 20px;
 }
@@ -140,8 +140,9 @@
 @media screen and (hover: hover) {
   // Styles for scale img
   .about__gallery-item:hover {
-    transform: scale(90%);
-    transition: transform 0.3s ease-in;
+    transform: scale(100%);
+    transition: all 0.3s ease-in;
+    // border-radius: 60px;
   }
 
   // .about__gallery-item:not(:hover) {

@@ -533,3 +533,11 @@
   }
 }
 
+@media screen and (max-width: 715px) {
+  .header .header__controller-container {
+    gap: 6px;
+    padding-left: 0px;
+  }
+}
+
+

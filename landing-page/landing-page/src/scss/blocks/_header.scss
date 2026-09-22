@@ -283,7 +283,20 @@
     left: 52.5px;
   }
 
-  
+  .header__menu-link-active  {
+    // display: none;
+    // display: block;
+    border-bottom: 2px solid $color-dark;
+    pointer-events: none
+    // content: '';
+    // width: 0;
+    // height: 2px;
+    // left: 0;
+    // bottom: -5px;
+    // background-color: $color-dark;
+    // position: absolute;
+    // opacity: 1;
+  }
 }
 
 // Menu section

@@ -1,5 +1,6 @@
 .title-menu {
-  margin: 0 280px;
+  // margin: 0 280px;
+  max-width: 800px;
   font-family: $font-main;
   font-size: 60px;
   font-style: normal;
@@ -15,5 +16,13 @@
     font-weight: 600;
     line-height: 125%; /* 75px */
     margin: 0px;
+  }
+}
+
+@media (max-width: 715px) {
+  .title-menu {
+    font-size: 32px;
+    max-width: 348px;
+    text-align: center;
   }
 }

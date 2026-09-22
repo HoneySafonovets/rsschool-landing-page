@@ -1,4 +1,10 @@
 // Buttons with drinks
+.drinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .drinks__choice {
   display: flex;
   justify-content: center;
@@ -79,7 +85,7 @@
   cursor: pointer;
 
   // Hover and not(:hover)
-  @media (hover: hover) {
+  @media screen and (hover: hover) {
     &:hover {
       transition: background-color 0.3s ease-in;
       background-color: $color-pagination-active;
@@ -185,14 +191,14 @@
   border-radius: 40px;
   border: 1px solid $color-pagination;
 
-  @media (hover: hover) {
+  @media screen and (hover: hover) {
     &:hover .menu__item-img {
-      transform: scale(1);
+      transform: scale(100%);
       transition: transform 0.3s ease-in;
     }
   
     &:not(:hover) .menu__item-img {
-      transform: scale(1.1);
+      transform: scale(110%);
       transition: transform 0.3s ease-in;
     }
   }
@@ -210,15 +216,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 308px;
-  height: 309px;
+  width: 100%;
+  // height: 100%;
   border-radius: 37.8px;
   cursor: pointer;
 }
 
 .menu__item-img {
   flex-shrink: 0;
-  overflow: hidden;
+  transform: scale(115%);
+  transition: all 0.3s ease-in;
+  // overflow: hidden;
 }
 
 // Styles for text under IMAGE
@@ -367,6 +375,32 @@
   .drinks__update-button {
     display: block;
   }
+
+  .menu__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    border: 1px solid $color-pagination;
+
+    @media screen and (hover: hover) {
+      &:hover .menu__item-img {
+        transform: scale(100%);
+        transition: transform 0.3s ease-in;
+      }
+    
+      &:not(:hover) .menu__item-img {
+        transform: scale(110%);
+        transition: transform 0.3s ease-in;
+      }
+    }
+  }
+
+  .menu__item-img {
+    flex-shrink: 0;
+    transform: scale(110%);
+    transition: all 0.3s ease-in;
+    // overflow: hidden;
+  }
 }
 
 @media screen and (max-width: 715px) {
@@ -382,6 +416,23 @@
 
   .menu__item {
     max-width: 310px;
+  }
+
+  .drinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .drinks__choice {
+    gap: 8px;
+  }
+
+  .text-wrapper {
+    // gap: 12px;
+    justify-content: space-between;
+    min-height: 196px;
   }
 }
 

@@ -170,7 +170,7 @@
   }
 }
 
-@media screen and (hover: hover) {
+@media screen and (hover: hover) and (max-width: 480px) {
   // Styles for scale img
   .about__gallery-item:hover {
     transform: scale(210%);

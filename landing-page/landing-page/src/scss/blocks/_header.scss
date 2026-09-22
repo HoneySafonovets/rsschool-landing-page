@@ -77,8 +77,112 @@
     width: 36px;
     height: 36px;
   }
+
+  .header__switch-light {
+    svg {
+      rect {
+        fill: $color-light;
+        transition: all 0.3s ease-in;
+      }
+      path {
+        fill: $color-accent;
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+
+  .header__switch-active-light {
+    pointer-events: none;
+
+    svg {
+      rect {
+        fill: $color-accent;
+        transition: all 0.3s ease-in;
+      }
+      path {
+        fill: $color-light;
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+
+  .header__switch-dark {
+    svg {
+      rect {
+        fill: $color-light;
+      }
+      path {
+        fill: $color-dark;
+      }
+    }
+  }
+  .header__switch-dark-active {
+    pointer-events: none;
+    .rect-dark  {
+      fill: $color-pagination-active;
+      transition: all 0.3s ease-in;
+    }
+
+    .path-dark {
+      fill: $color-light;
+      transition: fill 0.3s ease-in;
+    }
+  }
+
+  @media screen and (hover: hover) {
+    .header__switch-dark:hover {
+      .rect-dark  {
+        fill: $color-pagination-active;
+        transition: all 0.3s ease-in;
+      }
+
+      svg path {
+        fill: $color-light;
+        transition: fill 0.3s ease-in;
+      }
+    }
+
+    .header__switch-dark:not(hover) {
+      svg {
+        rect {
+          fill: $color-light;
+          transition: fill 0.3s ease-in;
+        }
+        path {
+          fill: $color-dark;
+          transition: fill 0.3s ease-in;
+        }
+      }
+    }
+
+    .header__switch-light:hover {
+      svg {
+        rect {
+          fill: $color-accent;
+          transition: all 0.3s ease-in;
+        }
+        path {
+          fill: $color-light;
+          transition: all 0.3s ease-in;
+        }
+      }
+    }
+    // .header__switch-light:not(hover) {
+    //   svg {
+    //     rect {
+    //       transition: all 0.3s ease-in;
+    //     }
+    //     path {
+    //       fill: $color-accent;
+    //       transition: all 0.3s ease-in;
+    //     }
+    //   }
+    // }
+  }
   
-  .header__switch-active {
+  
+  .header__switch-active-light {
+    pointer-events: none;
     border: 1px solid $color-accent;
     background-color: $color-accent;
     border-radius: 100px;

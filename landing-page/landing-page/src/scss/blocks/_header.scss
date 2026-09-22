@@ -422,7 +422,7 @@
   }
 
   .header .header__controller-container {
-    gap: 24px;
+    gap: 12px;
     padding-left: 0px;
   }
 
@@ -521,11 +521,6 @@
 }
 
 @media screen and (max-width: 885px) {
-  .header .header__controller-container {
-    gap: 6px;
-    padding-left: 0px;
-  }
-
   .header .header__switch-theme-container {
     max-width: 104px;
     height: 52px;

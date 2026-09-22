@@ -74,40 +74,42 @@
   line-height: 150%; /* 24px */
   position: relative;
 
-  &::after {
-    // display: none;
-    position: absolute;
-    content: '';
-    background-image: url('/cup.svg');
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    top: 22px;
-    right: 64px;
-    opacity: 0;
-    animation: not-block 0.3s 1;
-  }
+  @media screen and (hover: hover) {
+    &::after {
+      // display: none;
+      position: absolute;
+      content: '';
+      background-image: url('/cup.svg');
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      top: 22px;
+      right: 64px;
+      opacity: 0;
+      animation: not-block 0.3s 1;
+    }
 
-  &:hover::after {
-    // display: block;
-    opacity: 1;
-    animation: cup__block 0.3s 1;
-  }
+    &:hover::after {
+      // display: block;
+      opacity: 1;
+      animation: cup__block 0.3s 1;
+    }
 
-  &:hover .enjoy__button-item {
-    transition: transform 0.3s ease-in;
-    transform: translate(-14px, 0px);
-  }
+    &:hover .enjoy__button-item {
+      transition: transform 0.3s ease-in;
+      transform: translate(-14px, 0px);
+    }
 
-  &:not(:hover) .enjoy__button-item {
-    transition: transform 0.3s ease-in;
-    transform: translate(0px, 0px);
-  }
+    &:not(:hover) .enjoy__button-item {
+      transition: transform 0.3s ease-in;
+      transform: translate(0px, 0px);
+    }
 
-  &:not(:hover):after {
-    // display: none;
-    animation: not-block 0.3s ease-in forwards;
-  }
+    &:not(:hover):after {
+      // display: none;
+      animation: not-block 0.3s ease-in forwards;
+    }
+  }  
 }
 
 // Animatio for cup
@@ -175,13 +177,13 @@
         display: block;
         position: absolute;
         content: '';
-        background-image: url('../assets/main/cup.svg');
+        background-image: url('/cup.svg');
         background-repeat: no-repeat;
         width: 20px;
         height: 20px;
         top: 22px;
         right: 64px;
-        // opacity: 1;
+        opacity: 1;
         // animation: not-block 0.3s 1;
       }
       &:not(:hover):after {

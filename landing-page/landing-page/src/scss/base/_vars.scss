@@ -1,0 +1,29 @@
+// Fonts 
+$font-main: 'Inter', sans-serif;
+$font-accent: 'Inter', sans-serif;;
+
+// Colors
+$background-main: #E1D4C9;
+$color-light: #E1D4C9;
+$color-dark: #403F3D;
+$color-accent: #B0907A;
+$color-pagination: #C1B6AD;
+$color-pagination-active: #665F55;
+
+.dark-theme {
+  $background-main: #292826;
+  $color-light: #E1D4C9;
+  $color-dark: #403F3D;
+  $color-accent: #B0907A;
+  $color-pagination: #C1B6AD;
+  $color-pagination-active: #665F55;
+}
+// Dark theme
+$dark-text-primary: #e1d4c9;
+$dark-text-inverse: #e1d4c9;
+$dark-text-accent: #b0907a;
+$dark-bg-page: #292826;
+$dark-bg-container: #403f3d;
+$dark-bg-overlay: rgba(41, 40, 38, 0.8);
+$dark-border-primary: #665f55;
+$dark-border-inverse: #c1b6ad;

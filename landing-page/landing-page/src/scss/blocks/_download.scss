@@ -1,0 +1,199 @@
+.download {
+  display: flex;
+  padding-top: 100px;
+}
+
+.download__info {
+  padding: 144px 100px 144px 0px;
+}
+
+// Styles for image
+.download__imgage {
+  // width: 630px;
+  // height: 630px;
+}
+
+// Styles for title
+.download__title {
+  font-weight: 600;
+  line-height: 75px;
+  text-align: left;
+}
+
+.download__text {
+  font-family: $font-main;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  margin-bottom: 40px;
+}
+
+// Buttons blok
+.download__buttons {
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  gap: 20px;
+}
+
+.download__apple,
+.download__google {
+  display: flex;
+  border-radius: 100px;
+  padding: 12px 20px 11px 21px;
+  border: 1px solid $color-pagination-active;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.download__apple-dark,
+.download__google-dark {
+  display: flex;
+  border-radius: 100px;
+  border: 1px solid $dark-border-inverse;
+  transition: all 0.3s ease-in;
+
+  @media screen and (hover: hover) {
+    &:hover {
+      background-color: $dark-bg-container;
+      color: $dark-text-inverse;
+      transition: all 0.3s ease-in;
+      border: 1px solid opacity(0);
+    }
+    
+    // SVG hover
+    &:hover svg path {
+      transition: fill 0.3s ease-in;
+      fill: $dark-text-inverse;
+    }
+  }
+}
+
+
+
+// Button
+.button__text {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-main;
+  align-items: left;
+  gap: 2px;
+  margin-right: 37px;
+
+  .button__text-top {
+    text-align: left;
+    font-family: $font-main;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 14px */
+  }
+  .button__text-bottom {
+    text-align: center;
+    font-family: $font-main;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+  }
+}
+
+// Google button text
+.button__text-google {
+  margin-right: 24px;
+}
+
+@media (max-width: 1365px) {
+  .download {
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .download__info {
+    padding: 0px;
+  }
+  // Title styles
+  .download__title {
+    font-family: $font-main;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 75px */
+  }
+  // Two phone styles
+  .download__imgage {
+    margin: 100px 29px 0px 29px;
+    width: 630px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .download__title {
+    line-height: 125%;
+    font-size: 32px;
+    text-align: left;
+  }
+
+  
+}
+
+@media screen and (max-width: 470px) {
+  // Buttons blok
+  .download__buttons {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    gap: 18px;
+  }
+
+  .download__apple, .download__google {
+    display: flex;
+    border-radius: 100px;
+    padding: 12px 20px 11px 21px;
+    max-width: 202px;
+    max-height: 66px;
+    border: 1px solid #665F55;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  .download__imgage {
+    margin: 40px 29px 0px 29px;
+    width: 630px;
+    height: auto;
+  }
+}
+
+@media screen and (hover: hover) {
+  .download__apple,
+  .download__google {
+
+    // Hover styles
+    &:hover {
+      background-color: $color-pagination-active;
+      color: $color-light;
+      transition: all 0.3s ease-in;
+      border: 1px solid opacity(0);
+      // border: none;
+    }
+    &:not(:hover) {
+      // background-color: $color-light;
+      // color: $color-dark;
+      // transition: all 0.3s ease-in;
+    }
+    
+    // SVG hover
+    &:hover svg path {
+      transition: fill 0.3s ease-in;
+      fill: $color-light;
+    }
+    // &:not(:hover) svg path {
+    //   transition: fill 0.3s ease-in;
+    //   fill: $color-dark;
+    // }
+  }
+}

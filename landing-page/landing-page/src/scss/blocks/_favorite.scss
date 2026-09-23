@@ -1,0 +1,296 @@
+.favorite {
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.favorite__title {
+  padding-bottom: 43px;
+}
+
+.favorite__carousel {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+// Styles for arrows
+.favorite__arrow {
+  border-radius: 100px;
+  width: 60px;
+  height: 60px;
+  border: 1px solid $color-pagination-active;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: none;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  & svg path {
+    fill: $color-dark;
+    stroke: $color-dark;
+  }
+}
+
+// Dark ARROW
+.favorite__arrow-dark {
+  border: 1px solid $dark-border-inverse;
+  transition: all 0.3s ease-in;
+
+  & svg path {
+    fill: $dark-text-primary;
+    stroke: $dark-text-primary;
+  }
+}
+
+.favorite__content {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1152px;
+  // padding: 0px 336px 0px 336px;
+}
+
+.favorite__slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.favorite__slider-dark {
+  color: $dark-text-primary;
+  transition: all 0.3s ease-in;
+} 
+
+.favorite__drink {
+  display: block;
+  width: 480px;
+  height: 480px;
+  margin-bottom: 20px;
+}
+
+// Texts styles
+.favorite__drink-description {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  gap: 16px;
+
+  .favorite__drink-title {
+    font-family: $font-main;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 30px */
+    text-align: center;
+  }
+
+  .favorite__drink-text {
+    text-align: center;
+    font-family: $font-main;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+
+  .favorite__drink-price {
+    text-align: center;
+    font-family: $font-main;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 30px */
+  }
+}
+
+// Pagination styles
+.favorite__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  .favorite__pagination-item {
+    width: 40px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: $color-pagination;
+  }
+
+  .favorite__pagination-item:first-child {
+    background-color: $color-pagination-active;
+  }
+}
+
+
+// Media styles 768px
+@media (max-width: 768px) {
+  .favorite__title {
+    padding-bottom: 40px;
+  }
+
+  .favorite__content {
+    margin: 0 auto;
+    max-width: 1152px;
+    padding: 0 44px;
+    }
+  .favorite__slider {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    max-width: 480px;
+    // margin: 0 4px;
+    padding: auto;
+  }
+
+  .favorite__drink {
+    display: block;
+    max-width: none;
+    height: 480px;
+    margin-bottom: 20px;
+  }
+
+  // Title styles
+  .favorite__title {
+    padding-bottom: 43px;
+    line-height: 125%; /* 75px */
+  }
+
+  .favorite__carousel {
+    padding: 0px 0px 40px 0;
+  } 
+
+    // Styles for arrows
+  .favorite__arrow {
+    border-radius: 100px;
+    width: 62px;
+    height: 60px;
+    border: 1px solid $color-pagination-active;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: none;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .favorite__carousel {
+    justify-content: center;
+  }
+
+  .favorite__content {
+    margin: 0 0;
+    max-width: 1152px;
+    padding: 0 0px;
+  }
+  .favorite__arrow {
+    display: none;
+  }
+  .favorite__slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .favorite__content {
+      margin: 0 auto;
+      max-width: 1152px;
+      padding: 0 44px;
+    }
+
+    .favorite__slider {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      max-width: 480px;
+      // margin: 0 4px;
+      padding: auto;
+    }
+    
+    .favorite__drink {
+      display: block;
+      max-width: 348px;
+      height: 348px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .favorite__title {
+    padding-bottom: 40px;
+    line-height: 125%;
+    transition: all 0.3s ease-in;
+  }
+
+  .favorite__drink-description {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    gap: 16px;
+
+    .favorite__drink-title {
+      font-family: $font-main;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 125%; /* 30px */
+      text-align: center;
+    }
+
+    .favorite__drink-text {
+      text-align: center;
+      font-family: $font-main;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 24px */
+    }
+
+    .favorite__drink-price {
+      text-align: center;
+      font-family: $font-main;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 125%; /* 30px */
+    }
+  }
+}
+
+@media screen and (hover: hover) {
+  .favorite__arrow {
+    &:hover {
+      cursor: pointer;
+      background-color: $color-pagination-active;
+      transition: background-color 0.3s ease-in;
+      border: 1px solid opacity(0);
+    }
+    // When hover on
+    &:hover svg path {
+      // fill: $color-light;
+      transition: stroke 0.3s ease-in;
+      stroke: $color-light;
+    }
+
+    // not styles for arrow
+    // &:not(:hover) svg path {
+    //   // fill: $color-light;
+    //   transition: stroke 0.3s ease-in;
+    //   stroke: $color-dark;
+    // }
+
+    // &:not(:hover) {
+    //   cursor: pointer;
+    //   background-color: $color-light;
+    //   transition: background-color 0.3s ease-in;
+    // }
+  }
+}

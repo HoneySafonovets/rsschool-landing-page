@@ -45,31 +45,32 @@
   border: 1px solid $color-pagination-active;
   gap: 6px;
   cursor: pointer;
-
-  // // Hover styles
-  // &:hover {
-  //   background-color: $color-pagination-active;
-  //   color: $color-light;
-  //   transition: all 0.3s ease-in;
-  //   border: 1px solid opacity(0);
-  //   // border: none;
-  // }
-  // &:not(:hover) {
-  //   background-color: $color-light;
-  //   color: $color-dark;
-  //   transition: all 0.3s ease-in;
-  // }
-  
-  // // SVG hover
-  // &:hover svg path {
-  //   transition: fill 0.3s ease-in;
-  //   fill: $color-light;
-  // }
-  // &:not(:hover) svg path {
-  //   transition: fill 0.3s ease-in;
-  //   fill: $color-dark;
-  // }
 }
+
+.download__apple-dark,
+.download__google-dark {
+  display: flex;
+  border-radius: 100px;
+  border: 1px solid $dark-border-inverse;
+  transition: all 0.3s ease-in;
+
+  @media screen and (hover: hover) {
+    &:hover {
+      background-color: $dark-bg-container;
+      color: $dark-text-inverse;
+      transition: all 0.3s ease-in;
+      border: 1px solid opacity(0);
+    }
+    
+    // SVG hover
+    &:hover svg path {
+      transition: fill 0.3s ease-in;
+      fill: $dark-text-inverse;
+    }
+  }
+}
+
+
 
 // Button
 .button__text {
@@ -180,9 +181,9 @@
       // border: none;
     }
     &:not(:hover) {
-      background-color: $color-light;
-      color: $color-dark;
-      transition: all 0.3s ease-in;
+      // background-color: $color-light;
+      // color: $color-dark;
+      // transition: all 0.3s ease-in;
     }
     
     // SVG hover
@@ -190,9 +191,9 @@
       transition: fill 0.3s ease-in;
       fill: $color-light;
     }
-    &:not(:hover) svg path {
-      transition: fill 0.3s ease-in;
-      fill: $color-dark;
-    }
+    // &:not(:hover) svg path {
+    //   transition: fill 0.3s ease-in;
+    //   fill: $color-dark;
+    // }
   }
 }

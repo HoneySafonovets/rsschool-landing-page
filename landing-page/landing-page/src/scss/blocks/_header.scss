@@ -31,6 +31,22 @@
       z-index: -1;
       background-color: $color-accent;
     }
+
+    .header__logo-back-dark {
+      background-color: $dark-text-accent;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  .header__svg path {
+    fill: $color-dark;
+    transition: all 0.3s ease-in;
+  }
+
+  // DARK theme
+  .header__svg-dark path {
+    fill: $color-light;
+    transition: all 0.3s ease-in;
   }
 
   .header__container {
@@ -401,6 +417,28 @@
     // position: absolute;
     // opacity: 1;
   }
+}
+
+.header-text-dark {
+  &:link {
+      color: $dark-text-primary;
+      font-weight: 600;
+      transition: all 0.3s ease-in;
+    }
+
+    &:active {
+      // text-decoration: none;
+      font-weight: 600;
+      color: $dark-text-primary;
+      transition: all 0.3s ease-in;
+    }
+
+    &:visited {
+      color: $dark-text-primary;
+      font-weight: 600;
+      transition: all 0.3s ease-in;
+    }
+  transition: all 0.3s ease-in;
 }
 
 // Menu section

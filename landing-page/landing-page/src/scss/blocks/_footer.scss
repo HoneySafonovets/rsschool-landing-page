@@ -10,6 +10,11 @@
   border-radius: 40px;
 }
 
+.footer__wrapper-dark {
+  background-color: $dark-bg-container;
+  transition: all 0.3s ease-in;
+}
+
 .footer__info {
   display: flex;
   max-width: 530px;

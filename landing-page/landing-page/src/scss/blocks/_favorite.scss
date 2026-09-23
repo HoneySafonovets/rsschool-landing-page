@@ -28,36 +28,21 @@
   margin-top: auto;
   margin-bottom: auto;
 
-  // &:hover {
-  //   cursor: pointer;
-  //   background-color: $color-pagination-active;
-  //   transition: background-color 0.3s ease-in;
-  //   border: 1px solid opacity(0);
-  // }
-
   & svg path {
     fill: $color-dark;
     stroke: $color-dark;
   }
-  // // When hover on
-  // &:hover svg path {
-  //   // fill: $color-light;
-  //   transition: stroke 0.3s ease-in;
-  //   stroke: $color-light;
-  // }
+}
 
-  // // not styles for arrow
-  // &:not(:hover) svg path {
-  //   // fill: $color-light;
-  //   transition: stroke 0.3s ease-in;
-  //   stroke: $color-dark;
-  // }
+// Dark ARROW
+.favorite__arrow-dark {
+  border: 1px solid $dark-border-inverse;
+  transition: all 0.3s ease-in;
 
-  // &:not(:hover) {
-  //   cursor: pointer;
-  //   background-color: $color-light;
-  //   transition: background-color 0.3s ease-in;
-  // }
+  & svg path {
+    fill: $dark-text-primary;
+    stroke: $dark-text-primary;
+  }
 }
 
 .favorite__content {
@@ -75,6 +60,12 @@
   justify-content: center;
   align-items: center;
 }
+
+
+.favorite__slider-dark {
+  color: $dark-text-primary;
+  transition: all 0.3s ease-in;
+} 
 
 .favorite__drink {
   display: block;
@@ -187,7 +178,6 @@
     fill: none;
     margin-top: auto;
     margin-bottom: auto;
-
   }
 }
 
@@ -291,16 +281,16 @@
     }
 
     // not styles for arrow
-    &:not(:hover) svg path {
-      // fill: $color-light;
-      transition: stroke 0.3s ease-in;
-      stroke: $color-dark;
-    }
+    // &:not(:hover) svg path {
+    //   // fill: $color-light;
+    //   transition: stroke 0.3s ease-in;
+    //   stroke: $color-dark;
+    // }
 
-    &:not(:hover) {
-      cursor: pointer;
-      background-color: $color-light;
-      transition: background-color 0.3s ease-in;
-    }
+    // &:not(:hover) {
+    //   cursor: pointer;
+    //   background-color: $color-light;
+    //   transition: background-color 0.3s ease-in;
+    // }
   }
 }

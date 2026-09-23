@@ -4,10 +4,16 @@ html {
 
 .body {
   background-color: $background-main;
+  transition: all 0.3s ease-in;
 
   &::-webkit-scrollbar {
     width: 0;
   }
+}
+
+.body-dark {
+  background-color: $dark-bg-page;
+  transition: all 0.3s ease-in;
 }
 
 .container {
@@ -32,6 +38,12 @@ html {
   padding-bottom: 40px;
   font-style: normal;
   // line-height: 125%;
+  transition: all 0.3s ease-in;
+}
+
+.title-dark {
+  color: $dark-text-primary !important;
+  transition: all 0.3s ease-in;
 }
 
 .title-footer {

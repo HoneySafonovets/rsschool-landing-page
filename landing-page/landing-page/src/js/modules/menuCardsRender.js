@@ -28,7 +28,7 @@ export default function menuCardsRenders(categoryDrink = 'coffee') {
                 <h2 class="menu__item-title">${el.name}</h2>
                 <p class="menu__item-text">${el.description}</p>
               </div>
-              <span class="menu__item-price">${el.price}</span>
+              <span class="menu__item-price">$${el.price}</span>
             </div>
           </div>
       `;

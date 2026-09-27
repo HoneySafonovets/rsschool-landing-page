@@ -12,7 +12,7 @@
 }
 
 // ACtive button'
-.drinks__choice-active {
+.drinks__choice-list-active {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +20,7 @@
   border-radius: 100px;
   background-color: $color-pagination-active;
   border: none;
+  pointer-events: none;
   
   .drinks__img-wrapper {
     display: flex;
@@ -50,6 +51,7 @@
     font-weight: 600;
     line-height: 150%; /* 24px */
     margin-left: 8px;
+    pointer-events: none;
   }
 
   .ligt-color {
@@ -67,7 +69,6 @@
   }
 }
 .drinks__active {
-  cursor: auto;
   background-color: $background-main;
 }
 .img-active {
@@ -177,6 +178,14 @@
   // Image in inactive buttons
   .drinks__inactive-img {
     background-color: $color-pagination;
+  }
+}
+
+.drinks__choice-list-active {
+  pointer-events: none;
+
+  .drinks__choice-text .drinks__choice-text {
+    color: $color-light;
   }
 }
 

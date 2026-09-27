@@ -3,6 +3,13 @@ export default function mobileMemuOpen() {
   const mobileNav = document.querySelector('.header__nav');
   const mobileLink = document.querySelectorAll('.header__list-link');
 
+  // Close menu
+  function closeMenu() {
+    mobileBtn.classList.remove('header__menu-btn-active');
+    mobileNav.classList.remove('header__nav-mobile');
+    document.body.classList.remove('no-scroll');
+  }
+
   mobileBtn.addEventListener('click', () => {
     mobileBtn.classList.toggle('header__menu-btn-active');
     mobileNav.classList.toggle('header__nav-mobile');
@@ -17,16 +24,19 @@ export default function mobileMemuOpen() {
       return;
     }
     
-    mobileBtn.classList.remove('header__menu-btn-active');
-    mobileNav.classList.remove('header__nav-mobile');
-    document.body.classList.remove('no-scroll');
+    closeMenu();
   });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' ) {
-      mobileBtn.classList.remove('header__menu-btn-active');
-      mobileNav.classList.remove('header__nav-mobile');
-      document.body.classList.remove('no-scroll');
+      closeMenu();
+    }
+  });
+
+  const mobileChange = window.matchMedia('(min-width: 769px)');
+  mobileChange.addEventListener('change', (e) => {
+    if (e.matches) {
+      closeMenu();
     }
   });
 }

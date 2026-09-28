@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Coffee house</title>
-    <script type="module" crossorigin src="./assets/main-CZURznup.js"></script>
+    <script type="module" crossorigin src="./assets/menu-BVjre2zj.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/mobile-menu-Bh6W0vkb.js">
     <link rel="stylesheet" crossorigin href="./styles/style.css">
   </head>
   <body class="body">
@@ -99,30 +100,30 @@
             Behind each of our cups hides an <span class="font-accent">amazing surprise</span>
           </h1>
           <div class="drinks__choice">
-            <div class="drinks__choice-active">
-              <div class="drinks__img-wrapper drinks__active">
-                <img src="./coffee-menu-1.svg" aria-hidden="true" alt="Coffee" class="drinks__choice-img img-active">
+            <div class="drinks__choice-list drinks__choice-list-active"  id="coffee" data-category="coffee">
+              <div class="drinks__img-wrapper">
+                <img src="./coffee-menu-1.svg" aria-hidden="true" alt="Coffee" class="drinks__choice-img">
               </div>
-              <span class="drinks__choice-text ligt-color">Coffee</span>
+              <span class="drinks__choice-text">Coffee</span>
             </div>
-            <div class="drinks__choice-list">
-              <div class="drinks__img-wrapper drinks__inactive">
+            <div class="drinks__choice-list" id="tea" data-category="tea">
+              <div class="drinks__img-wrapper">
                 <img src="./iron-tea.svg" aria-hidden="true" alt="Tea" class="drinks__choice-img drinks__inactive-img">
               </div>
               <span class="drinks__choice-text">Tea</span>
             </div>
-            <div class="drinks__choice-list">
-              <div class="drinks__img-wrapper drinks__inactive">
-                <img src="./desserrts.svg" aria-hidden="true" alt="Desserts" class="drinks__choice-img drinks__inactive-img drinks-desserts">
+            <div class="drinks__choice-list" id="dessert" data-category="dessert">
+              <div class="drinks__img-wrapper">
+                <img src="./desserrts.svg" aria-hidden="true" alt="Dessert" class="drinks__choice-img drinks__inactive-img drinks-desserts">
               </div>
               <span class="drinks__choice-text">Dessert</span>
             </div>
           </div>
           <div class="menu">
             <div class="menu__wrapper">
-              <div class="menu__item">
+              <!-- <div class="menu__item">
                 <div class="img-wrapper">
-                  <img src="./coffee-1.png" alt="Irish coffee" class="menu__item-img">
+                  <img src="/coffee-1.png" alt="Irish coffee" class="menu__item-img">
                 </div>
                 <div class="text-wrapper">
                   <div class="top-wrapper">
@@ -134,7 +135,7 @@
               </div>
               <div class="menu__item">
                 <div class="img-wrapper">
-                  <img src="./coffee-2.png" alt="Kahlua coffee" class="menu__item-img">
+                  <img src="/coffee-2.png" alt="Kahlua coffee" class="menu__item-img">
                 </div>
                 <div class="text-wrapper">
                   <div class="top-wrapper">
@@ -146,7 +147,7 @@
               </div>
               <div class="menu__item">
                 <div class="img-wrapper">
-                  <img src="./coffee-3.png" alt="Honey raf" class="menu__item-img">
+                  <img src="/coffee-3.png" alt="Honey raf" class="menu__item-img">
                 </div>
                 <div class="text-wrapper">
                   <div class="top-wrapper">
@@ -158,7 +159,7 @@
               </div>
               <div class="menu__item">
                 <div class="img-wrapper">
-                  <img src="./coffee-4.png" alt="Ice cappuccino" class="menu__item-img">
+                  <img src="/coffee-4.png" alt="Ice cappuccino" class="menu__item-img">
                 </div>
                 <div class="text-wrapper">
                   <div class="top-wrapper">
@@ -170,7 +171,7 @@
               </div>
               <div class="menu__item">
                 <div class="img-wrapper">
-                  <img src="./coffee-5.png" alt="Espresso" class="menu__item-img">
+                  <img src="/coffee-5.png" alt="Espresso" class="menu__item-img">
                 </div>
                 <div class="text-wrapper">
                   <div class="top-wrapper">
@@ -182,7 +183,7 @@
               </div>
               <div class="menu__item">
                 <div class="img-wrapper">
-                  <img src="./coffee-6.png" alt="Latte" class="menu__item-img">
+                  <img src="/coffee-6.png" alt="Latte" class="menu__item-img">
                 </div>
                 <div class="text-wrapper">
                   <div class="top-wrapper">
@@ -194,7 +195,7 @@
               </div>
               <div class="menu__item">
                 <div class="img-wrapper">
-                  <img src="./coffee-7.png" alt="Latte macchiato" class="menu__item-img">
+                  <img src="/coffee-7.png" alt="Latte macchiato" class="menu__item-img">
                 </div>
                 <div class="text-wrapper">
                   <div class="top-wrapper">
@@ -206,7 +207,7 @@
               </div>
               <div class="menu__item">
                 <div class="img-wrapper">
-                  <img src="./coffee-8.png" alt="Coffee with cognac" class="menu__item-img">
+                  <img src="/coffee-8.png" alt="Coffee with cognac" class="menu__item-img">
                 </div>
                 <div class="text-wrapper">
                   <div class="top-wrapper">
@@ -215,7 +216,7 @@
                   </div>
                   <span class="menu__item-price">$6.50</span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="drinks__update-wrapper">

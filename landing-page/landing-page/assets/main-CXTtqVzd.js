@@ -1,0 +1,11 @@
+import{n as e,t}from"./mobile-menu-Bh6W0vkb.js";var n=[{name:`S’mores Frappuccino`,description:`This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.`,img:`/coffee-slider-1.png`,price:`$5.50`},{name:`Caramel Macchiato`,description:`Fragrant and unique classic espresso with rich caramel-peanut syrup, with the addition of delicate cream under whipped thick foam.`,img:`/coffee-slider-2.png`,price:`$5.00`},{name:`Ice coffee`,description:`A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.`,img:`/coffee-slider-3.png`,price:`$4.50`}];function r(){let e=document.querySelector(`.favorite__left-arrow`),t=document.querySelector(`.favorite__right-arrow`),r=document.querySelector(`.favorite__slider-track`),i=document.querySelectorAll(`.favorite__pagination-item`),a=!1;function o(){return n}let s=o();function c(){s.forEach(e=>{let t=`
+        <div class="favorite__slider-card">
+          <img src="${e.img}" alt="${e.name}" class="favorite__drink">
+          <ul class="favorite__drink-description">
+            <li class="favorite__drink-item favorite__drink-title">${e.name}</li>
+            <li class="favorite__drink-item favorite__drink-text">${e.description}</li>
+            <li class="favorite__drink-item favorite__drink-price">${e.price}</li>
+          </ul>
+        </div>
+      `;r.insertAdjacentHTML(`beforeend`,t)})}c();let l=r.querySelectorAll(`.favorite__slider-card`),u=l[0].cloneNode(!0),d=l[l.length-1].cloneNode(!0);r.appendChild(u),r.insertBefore(d,l[0]);let f=l[0].offsetWidth+parseInt(getComputedStyle(r).gap),p=1,m=s.length;function h(){let e=p-1;e<0&&(e=m-1),e>=m&&(e=0),i.forEach((t,n)=>{t.classList.toggle(`favorite__pagination-item-active`,n===e)})}function g(e){e||r.classList.add(`no-transition`),r.style.transform=`translateX(-${p*f}px)`,e||(r.offsetWidth,r.classList.remove(`no-transition`)),h()}g(!1),r.addEventListener(`transitionend`,()=>{p===m+1&&(p=1,g(!1),a=!1),p===0&&(p=m,g(!1),a=!1)}),e.addEventListener(`click`,()=>{p<=0||(a||=(p--,g(!0),!1))}),t.addEventListener(`click`,()=>{p>=m+1||(a||=(p++,g(!0),!1))}),i.forEach((e,t)=>{e.addEventListener(`click`,()=>{p=t+1,g(!0)})})}e(),t(),r();
+//# sourceMappingURL=main-CXTtqVzd.js.map

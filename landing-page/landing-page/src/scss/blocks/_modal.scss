@@ -1,0 +1,203 @@
+.modal__overlay {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in;
+  z-index: 10;
+}
+
+.modal__overlay-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  // justify-content: center;
+}
+
+// Modal image
+.modal__image {
+  padding-bottom: 162px;
+}
+
+// Modal face
+.modal__content-face {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal__title {
+  font-family: $font-main;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: $dark-bg-container;
+}
+
+.modal__size-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.modal__list-item {
+  border: 1px solid $dark-bg-container;
+  border-radius: 100px;
+  padding: 8px 16px 8px 8px;
+  width: 108px;
+  height: 46px; 
+}
+
+.modal__img-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  background-color: $dark-border-inverse;
+}
+
+.modal__list-item-text {
+  font-family: $font-main;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: $dark-bg-container;
+}
+
+
+// Active modal PARAMETRS
+.modal__list-item-active {
+  background-color: $dark-border-primary;
+  border-color: $dark-border-primary;
+
+  .modal__list-item-text {
+    color: $dark-text-primary;
+  }
+
+  .modal__img-text {
+    background-color: $dark-text-primary;
+  }
+}
+
+// MODAL Additives
+.modal__additives-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;  
+}
+
+.modal__list-item-additives {
+  border: 1px solid $dark-bg-container;
+  border-radius: 100px;
+  padding: 8px 16px 8px 8px;
+  width: 108px;
+  height: 46px; 
+}
+
+.modal__img-text-additives {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  background-color: $dark-border-inverse;
+}
+
+.modal__list-item-text-additives {
+  font-family: $font-main;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: $dark-bg-container;
+}
+
+
+// Active modal PARAMETRS
+.modal__list-item-additives-active {
+  background-color: $dark-border-primary;
+  border-color: $dark-border-primary;
+
+  .modal__img-text-additives {
+    color: $dark-text-primary;
+  }
+
+  .modal__list-item-text-additives {
+    background-color: $dark-text-primary;
+  }
+}
+
+
+// Modal Total PRICE
+.modal__total {
+  display: flex;
+  justify-content: space-between;
+  max-width: 326px;
+  font-family: $font-main;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: $dark-bg-container;
+}
+
+
+// Modal footer
+.modal__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} 
+
+.modal__footer-text-block {
+  display: flex;
+  padding: 12px 0px;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.modal__footer-text {
+  font-family: $font-main;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 140%;
+  color: $dark-bg-container;
+}
+
+.modal__footer-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-main;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 140%;
+  color: $dark-bg-container;
+  border: 1px solid $dark-border-primary;
+  border-radius: 100px;
+  padding: 10px 78px;
+  width: 326px;
+  height: 44px;
+}

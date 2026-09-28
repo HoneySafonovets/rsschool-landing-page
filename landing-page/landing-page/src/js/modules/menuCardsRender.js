@@ -19,7 +19,7 @@ export default function menuCardsRenders(categoryDrink = 'coffee') {
 
       if (el.category === categoryDrink) {
         card = `
-          <div class="menu__item" id="${el.category}">
+          <div class="menu__item" id="${el.name}">
             <div class="img-wrapper">
               <img src="${el.image}" alt="${el.image}" class="menu__item-img">
             </div>
@@ -39,6 +39,8 @@ export default function menuCardsRenders(categoryDrink = 'coffee') {
   }
   renderCards(categoryDrink);
 
+  
+
   choiceDrink.addEventListener('click', (e) => {
     if (!e.target.closest('.drinks__choice-active, .drinks__choice-list')) return;
     const targetChoiceList = e.target.closest('.drinks__choice-active, .drinks__choice-list')
@@ -56,5 +58,18 @@ export default function menuCardsRenders(categoryDrink = 'coffee') {
     targetChoiceList.classList.add('drinks__choice-list-active');
 
     renderCards(targetChoiceList.id);
+  });
+
+  cardContainer.addEventListener('click', (e) => {
+    if (!e.target.closest('.menu__item')) {
+      return;
+    }
+
+    const target = e.target;
+
+    // console.log(target)
+    if (target.closest('.menu__item')) {
+      // console.log(target.closest('.menu__item'));
+    }
   });
 };

@@ -7,4 +7,4 @@ import createModal from './modules/createModal';
 menuCardsRenders();
 mobileMemuOpen();
 switchThemes();
-createModal();
+// createModal();

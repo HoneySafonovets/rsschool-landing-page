@@ -1,4 +1,6 @@
 import drinksData from '../../data/products.json';
+import createModal from './createModal';
+import findItemById from './findItemById';
 
 export default function menuCardsRenders(categoryDrink = 'coffee') {
   const cardContainer = document.querySelector('.menu__wrapper');
@@ -61,7 +63,7 @@ export default function menuCardsRenders(categoryDrink = 'coffee') {
   });
 
   cardContainer.addEventListener('click', (e) => {
-    if (!e.target.closest('.menu__item')) {
+     if (!e.target.closest('.menu__item')) {
       return;
     }
 
@@ -69,7 +71,23 @@ export default function menuCardsRenders(categoryDrink = 'coffee') {
 
     // console.log(target)
     if (target.closest('.menu__item')) {
-      // console.log(target.closest('.menu__item'));
+      target.closest('.menu__item').id;
+
+      console.log(findItemById(data, target.closest('.menu__item').id))
+      const item = findItemById(data, target.closest('.menu__item').id);
+
+      createModal(
+        item.image,
+        item.name,
+        item.description,
+        item.price,
+        item.sizes.s.size,
+        item.sizes.m.size,
+        item.sizes.l.size,
+        item.additives[0].name,
+        item.additives[1].name,
+        item.additives[2].name,
+      );
     }
   });
 };

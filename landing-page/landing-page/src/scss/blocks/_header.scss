@@ -470,7 +470,9 @@
 
   .header__menu-link-active  {
     // display: none;
-    // display: block;
+    // // display: flex;
+    // justify-content: center;
+    // width: 72px;
     border-bottom: 2px solid $color-dark;
     pointer-events: none
     // content: '';
@@ -677,6 +679,7 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
+    width: 143px;
   }
 
   .header__menu {
@@ -732,6 +735,7 @@
 
   .header__nav-mobile {
     transform: translateX(-100%);
+    align-items: center;
     transition: transform 0.3s ease-in, padding 0.3s ease-in;;
   }
 

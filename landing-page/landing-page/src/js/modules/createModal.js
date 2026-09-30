@@ -5,11 +5,17 @@ export default function createModal(
   description,
   price,
   size_s,
+  size_s_price,
   size_m,
+  size_m_price,
   size_l,
+  size_l_price,
   additives_1,
+  additives_1_price,
   additives_2,
-  additives_3
+  additives_2_price,
+  additives_3,
+  additives_3_price,
 ) {
     const modal = document.createElement('div');
       modal.className = 'modal';
@@ -128,12 +134,84 @@ export default function createModal(
       modal.remove();
       document.body.classList.remove('no-scroll');
       document.querySelector('.modal__footer-close').removeEventListener('click', removeListener);
+      // document.removeEventListener('keydown', removeListener);
     }
     document.querySelector('.modal__footer-close').addEventListener('click', removeListener);
+    
+    // Change SIZE
+    function selectSize(price) {
+      // console.log(price)
+      const wrapper = document.querySelector('.modal__size-wrapper');
+
+      wrapper.addEventListener('click', (e) => {
+        const target = e.target.closest('.modal__list-item');
+        if (!target) return; // Exit
+
+        if (target) {
+          document.querySelectorAll('.modal__list-item').forEach((e) => {
+            e.classList.remove('modal__list-item-active');
+          });
+        }
+
+        if (target.id === 's') {
+          document.querySelector('.modal__total-price').innerHTML = `$${(Number(price) + Number(size_s_price)).toFixed(2)}`
+        }
+        if (target.id === 'm') {
+          document.querySelector('.modal__total-price').innerHTML = `$${(Number(price) + Number(size_m_price)).toFixed(2)}`
+        }
+        if (target.id === 'l') {
+          document.querySelector('.modal__total-price').innerHTML = `$${(Number(price) + Number(size_l_price)).toFixed(2)}`
+        }
+
+        
+
+        target.classList.add('modal__list-item-active');
+      })
+    }
+    selectSize(price);
+
+    // Change ADDITIves
+    function selectAdditives(price) {
+      const wrapper = document.querySelector('.modal__additives-wrapper');
+
+      wrapper.addEventListener('click', (e) => {
+        const target = e.target.closest('.modal__list-item-additives');
+        if (!target) return; // Exit
+
+        if (target) {
+          document.querySelectorAll('.modal__list-item-additives').forEach((e) => {
+            e.classList.remove('modal__list-item-additives-active');
+          });
+        }
+
+        // console.log(target)
+        if (target.id === '1') {
+          // console.log(document.querySelector('.modal__total-price').innerHTML )
+          document.querySelector('.modal__total-price').innerHTML = `$${(Number(price) + Number(additives_1_price)).toFixed(2)}`
+        }
+        if (target.id === '2') {
+          document.querySelector('.modal__total-price').innerHTML = `$${(Number(price) + Number(additives_2_price)).toFixed(2)}`
+        }
+        if (target.id === '3') {
+          // con
+          document.querySelector('.modal__total-price').innerHTML = `$${(Number(price) + Number(additives_3_price)).toFixed(2)}`
+        }
+
+        target.classList.add('modal__list-item-additives-active');
+      })
+    }
+    selectAdditives(price);
 
     // REMOVE modal if click any modal
     modal.addEventListener('click', (e) => {
       if (e.target.classList.contains('modal__overlay')) {
+        removeListener();
+      }
+    });
+
+    // Remove with ESCAPE
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' ) {
         removeListener();
       }
     });

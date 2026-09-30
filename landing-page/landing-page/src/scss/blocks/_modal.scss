@@ -189,6 +189,7 @@
   border: 1px solid $dark-bg-container;
   border-radius: 100px;
   padding: 8px 16px 6px 8px;
+  transition: all 0.3s ease-in;
 }
 
 .modal__img-text-additives {
@@ -219,13 +220,16 @@
   background-color: $dark-border-primary;
   border-color: $dark-border-primary;
   transition: all 0.3s ease-in;
+  pointer-events: none;
 
   .modal__img-text-additives {
-    color: $dark-text-primary;
+    background-color: $dark-text-primary;
+    color: $dark-bg-container;
   }
 
   .modal__list-item-text-additives {
-    background-color: $dark-text-primary;
+    color: $dark-text-primary;
+    transition: all 0.3s ease-in;
   }
 }
 
@@ -313,6 +317,7 @@
 
   .modal__list-item:hover {
     cursor: pointer;
+    border-color: $dark-border-primary;
     background: $dark-border-primary; // background-container
     transition: all 0.3s ease-in;
   }

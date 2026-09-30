@@ -73,7 +73,7 @@ export default function menuCardsRenders(categoryDrink = 'coffee') {
     if (target.closest('.menu__item')) {
       target.closest('.menu__item').id;
 
-      console.log(findItemById(data, target.closest('.menu__item').id))
+      // console.log(findItemById(data, target.closest('.menu__item').id))
       const item = findItemById(data, target.closest('.menu__item').id);
 
       createModal(
@@ -82,11 +82,17 @@ export default function menuCardsRenders(categoryDrink = 'coffee') {
         item.description,
         item.price,
         item.sizes.s.size,
+        item.sizes.s.priceAdd,
         item.sizes.m.size,
+        item.sizes.m.priceAdd,
         item.sizes.l.size,
+        item.sizes.l.priceAdd,
         item.additives[0].name,
+        item.additives[0].priceAdd,
         item.additives[1].name,
+        item.additives[1].priceAdd,
         item.additives[2].name,
+        item.additives[2].priceAdd,
       );
     }
   });

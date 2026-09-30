@@ -55,11 +55,152 @@
 }
 
 .favorite__slider {
+  // gap: 16px;
   display: flex;
+  // flex-direction: raw;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  max-width: 480px;
+  max-height: 640px;
+}
+// Card styles
+.favorite__slider-card {
+  display: flex;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  // flex: 0 0 100;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.favorite__slider-track {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.4s ease;
+}
+
+.favorite__slider-track.no-transition {
+  transition: none;
+}
+
+// Slider moving
+@keyframes sliderLeft {
+  from {
+    // transform: translateX(0);
+    left: 0px;
+  }
+  to {
+    // transform: translateX(-990px);
+    left: 1080px;
+  }
+}
+
+@keyframes sliderLeft767 {
+  from {
+    // transform: translateX(0);
+    left: 0px;
+  }
+  to {
+    // transform: translateX(-990px);
+    left: 620px;
+  }
+}
+
+@keyframes sliderLeft320 {
+  from {
+    // transform: translateX(0);
+    left: 0px;
+  }
+  to {
+    // transform: translateX(-990px);
+    left: 1080px;
+  }
+}
+
+
+// Move slider right 
+
+@keyframes sliderRight {
+  from {
+    // transform: translateX(0);
+    left: 0px;
+  }
+  to {
+    // transform: translateX(-990px);
+    left: -1080px;
+  }
+}
+
+@keyframes sliderRight767 {
+  from {
+    // transform: translateX(0);
+    left: 0px;
+  }
+  to {
+    // transform: translateX(-990px);
+    left: -620px;
+  }
+}
+
+@keyframes sliderRight320 {
+  from {
+    // transform: translateX(0);
+    left: 0px;
+  }
+  to {
+    // transform: translateX(-990px);
+    left: -580px;
+  }
+}
+
+// Classes for Moving
+.friends__slider-move-left {
+  animation: sliderLeft 0.7s ease-in;
+}
+
+.friends__slider-move-left-767 {
+  animation: sliderLeft767 0.7s ease-in;
+}
+
+.friends__slider-move-left-320 {
+  animation: sliderLeft320 0.7s ease-in;
+}
+
+.friends__slider-move-right {
+  animation: sliderRight 0.7s ease-in;
+}
+
+.friends__slider-move-right-767 {
+  animation: sliderRight767 0.7s ease-in;
+}
+
+.friends__slider-move-right-320 {
+  animation: sliderRight320 0.7s ease-in;
+}
+
+// Media sizes
+@media screen and (max-width: 530px) {
+  .friends {
+    padding: 42px 0px 42px 0px;
+    transition: padding 0.3s ease-in;
+  }
+
+  .friends__title {
+    font-size: clamp(25px, 7.8vw, 44px);
+    transition: margin 0.3s ease-in;
+  }
+
+  .friends__wrapper {
+    gap: 42px;
+    transition: gap 0.3s ease-in;
+  }
+}
+
+////////////////////////////////
 
 
 .favorite__slider-dark {
@@ -97,6 +238,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    // max-height: 48px;
   }
 
   .favorite__drink-price {
@@ -122,7 +268,8 @@
     background-color: $color-pagination;
   }
 
-  .favorite__pagination-item:first-child {
+  .favorite__pagination-item-active {
+    transition: all 0.3s ease-in;
     background-color: $color-pagination-active;
   }
 }
@@ -141,12 +288,22 @@
     }
   .favorite__slider {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     max-width: 480px;
     // margin: 0 4px;
     padding: auto;
+  }
+
+  .favorite__slider-card {
+    display: flex;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    // flex: 0 0 100;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .favorite__drink {
@@ -187,18 +344,20 @@
   }
 
   .favorite__content {
-    margin: 0 0;
-    max-width: 1152px;
-    padding: 0 0px;
+    // margin: 0 0;
+    // max-width: 1152px;
+    // padding: 0 0px;
   }
   .favorite__arrow {
     display: none;
   }
   .favorite__slider {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
+    max-width: 380px;
+    transition: all .3s ease-in;
 
     .favorite__content {
       margin: 0 auto;
@@ -210,7 +369,7 @@
       display: flex;
       flex-direction: column;
       align-content: center;
-      justify-content: center;
+      justify-content: flex-start;
       max-width: 480px;
       // margin: 0 4px;
       padding: auto;
@@ -222,6 +381,13 @@
       height: 348px;
       margin-bottom: 20px;
     }
+  }
+
+  .favorite__drink-description .favorite__drink-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .favorite__title {

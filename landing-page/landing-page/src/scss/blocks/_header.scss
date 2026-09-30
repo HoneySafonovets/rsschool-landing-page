@@ -670,13 +670,15 @@
     z-index: 10;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     background-color: $color-light !important;
     transition: transform 0.3s ease-in;
   }
 
   .header .header__menu-mobile-link {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: nowrap;
     flex-direction: row;
     width: 143px;
